@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --bg-header: #000000;
+    --text-primario: #ffffff;
+    --header-btn: #111111;
+    --hover-header: #2e2e2e;
+    --btn-cinza: #faf8f8;
+    --ponto-yellow: #ffbb00;
+    --linear-one: #ffbf08;
+    --linear-two: #f2a50c;
+    --btn-yellow: #332208;
+    --linear-three: #ffb60d;
+    --linear-four: #bb760e;
+    --hover-heade: #bebebe;
+
+}
+
+img {
+    max-width: 100%;
+    display: block;
+
+}
+
+img[src$=".jpg"] {        /* Só pra todos os img .jpg */
+    border-radius: 4px;
+}
+
+a {
+     color: inherit;    /*erda a cor do pai */
+}
+
+span {
+    color: var(--ponto-yellow);
+
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1.125;
+    font-family: 'Poppins';
+    font-weight: 600;
+}

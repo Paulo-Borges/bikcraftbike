@@ -1,0 +1,72 @@
+.header-bg {
+    background-color: var(--bg-header);
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.125rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.125rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.875rem;
+}
+
+.header-menu  a {
+    padding: 1rem 0px;
+    display: inline-block;
+    color: var(--text-primario);
+    font-size: 1.125rem;
+    position: relative;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.header-menu  a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: var(--text-primario);
+    margin-top: 4px;
+    transition: 0.5s;
+    position: absolute;
+}
+
+.header-menu  a:hover:after {
+
+    width: 100%;       /* 100% pra pegar a largura do pai */
+}
+
+@media (max-width:800px) {
+    .header-menu {
+        gap: 1.125rem;
+    }
+    .header-menu a {
+        background: var(--header-btn);
+        padding: 0.875rem 1rem;
+        border-radius: 4px;
+    }
+    .header-menu a:hover {
+        background-color: var(--hover-header);
+    }
+    .header a:after {
+        display: none;
+    }
+}
+@media (max-width:600px) {
+    .header-menu {
+        gap: 0.875rem;
+    }
+    .header-menu a {
+        padding: 8px 12px;
+        font-size: 1.875rem;
+    }
+}

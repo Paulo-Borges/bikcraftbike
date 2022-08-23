@@ -1,0 +1,80 @@
+.section-avancada {
+    color: var(--btn-cinza);
+    margin-bottom: 40px;
+}
+
+.section-cores span {
+    margin-bottom: 40px;
+    color: var(--linear-two);
+}
+
+.section-container p {
+    color: var(--btn-cinza);
+    margin-bottom: 40px;
+
+}
+
+.section-bg {
+    background: var(--bg-header);
+    color: var(--text-primario);
+    box-shadow: inset 0 80px var(--text-primario), inset 0 -80px var(--text-primario) ;  /*colocar a foto acima e abaixo da base*/
+}
+
+.section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.section-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.section-conteudo {
+    max-width: 1200px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-conteudo > span {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-size: 30px;
+    padding-left: 60px;
+}
+
+.section-conteudo h2 {
+    margin-bottom: 32px;
+    font-size: 50px;
+    padding-left: 60px;
+
+}
+
+.section-conteudo > p {
+    /* margin-bottom: 20px; */
+    font-size: 30px;
+    padding-left: 60px;
+}
+
+.section-container a {
+    /* margin-bottom: 500px; */
+    padding-left: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--linear-two);
+    text-decoration: underline;
+
+}
+
+.section-vantagens {
+    display: flex;         /* assim um vai fica do lado do outro*/
+    gap: 50px;
+    padding: 60px;
+    margin-top: 300px;
+    font-size: 20px;
+    font-weight: bold;
+}

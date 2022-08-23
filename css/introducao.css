@@ -1,0 +1,108 @@
+.introducao-bg {
+    background: var(--bg-header);
+    color: var(--text-primario);
+    box-shadow: inset 0 -120px var(--text-primario);    /* colocando sombra pra ajudara sobrepor foto*/
+}
+
+.introducao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 40px;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introducao-conteudo {
+    align-self: end;   /* pra alinhar ao fim */
+    padding-bottom: 200px;
+}
+
+.introducao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* pra sempre usar as medidas pedidas*/
+    border-radius: 6px;
+}
+
+.introducao h1  {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    line-height: 1.125;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.introducao p {
+    margin-bottom: 1.125rem;
+    font-size: 1.250rem;
+    line-height: 1.5;
+    color: var(--btn-cinza);
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.introducao h1 span {
+    color: var(--ponto-yellow);
+}
+
+.introducao a {
+    display: inline-block;
+    background: linear-gradient(var(--linear-one), var(--linear-two));
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    color: var(--btn-yellow);
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 1.025rem;
+    line-height: 1.33;
+    font-family: 'Poppins';
+    font-weight: 600;
+
+}
+
+.introducao a:hover {
+    color: var(--text-primario);
+    background: linear-gradient(var(--linear-three), var(--linear-four));
+}
+
+@media (max-width: 1200px) {
+    .introducao h1 {
+        font-size: 3rem;
+    }
+    .introducao p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .introducao-bg {
+        background: var(--header-btn);
+        padding-top: 40px;
+        box-shadow: inset 0 -60px var(--text-primario);
+    }
+    .introducao {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .introducao-conteudo {
+        padding-bottom: 0px;
+    }
+    .introducao h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .introducao img {
+        height: 18rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .introducao a {
+        padding: 12x 16px;
+        font-size: 16px;
+    }
+}

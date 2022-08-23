@@ -1,0 +1,217 @@
+#orcamento {
+    background: linear-gradient(var(--bg-header) 600px, var(--text-primario) 0px);
+}
+
+#orcamento h1 {
+    font-size: 50px;
+
+}
+
+.orcamento-container {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    padding-bottom: 120px;
+}
+.orcamento-container h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text-primario);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.orcamento-container h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 8px;
+    background-color: var(--linear-one);
+    position: absolute;
+    left: 5px;
+}
+
+.orcamento-produto,
+.orcamento-dados {
+    padding: 60px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.orcamento-dados {
+    background: var(--text-primario);
+    border-radius: 0 5px 5px 0;
+}
+
+.orcamento-dados input {
+    height: 40px;
+    width: 35%;
+}
+
+
+.orcamento-dados h2 {
+    color: var(--bg-header);
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.orcamento-dados label {
+    font-weight: 600;
+    color: var(--bg-header);
+}
+.orc-dados input {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    
+}
+
+
+.orcamento-produto {
+    border-radius: 5px 0 0 5px;
+    background: var(--bg-header);
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+    gap: 20px;
+}
+
+.orcamento-produto > * {   /* falar com todos */
+    grid-column: 1/-1;       /* todos vao de ponta a ponta */
+}
+
+.orcamento-produto  h2 {
+    font-size: 15px;
+}
+
+.orcamento-produto p {
+    font-size: 10px;
+    color: var(--text-primario);
+
+}
+.orcamento-produto > label {
+    grid-column: initial;
+}
+.orcamento-produto label {
+    font: 400 1rem/1.5 'Poppins', sans-serif;
+    background: var(--text-primario);
+    padding: 12px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+.orcamento-produto label::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--hover-heade);
+    border-radius: 50%;
+    margin-right: 6px;
+} 
+
+.orcamento-produto input:focus + label {
+    box-shadow: 0 0 0 2px var(--linear-four);
+}
+
+.orcamento-produto label span {
+    display: none;
+}
+
+/*  manipulaçao sem JS */
+.orcamento-produto input:checked + label span{
+    display: inline-block;
+}
+
+.orcamento-produto input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;  /* tira evento de click*/
+}
+/*  manipulaçao sem JS */
+.orcamento-produto input:checked + label {
+    background: var(--hover-header);
+    color: var(--text-primario);
+}
+/*  manipulaçao sem JS */
+.orcamento-produto input:checked + label::before {
+    border-color: var(--linear-one);
+    box-shadow: inset 0 0 0 3px var(--text-primario), inset 0 0 0 6px var(--bg-header);
+}
+.orcamento-conteudo {
+    display: none;
+}
+
+
+.orcamento-conteudo h2,
+.orcamento-dados h2:nth-of-type(n + 2) {
+ margin-top: 20px;
+}
+/*  manipulaçao sem JS */
+#bikcraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro {
+    display: grid;
+    gap: 20px;
+}
+.orcamento-detalhes {
+    display: none;
+    background: var(--text-primario);
+    padding: 20px;
+    
+    grid-template-columns: 1fr 1fr;
+    border-radius: 4px;
+    align-items: center;
+}
+.orcamento-detalhes li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.orcamento-detalhes li img {
+    margin-right: 8px;
+}
+.orcamento-produto input:checked + label + .orcamento-detalhes {
+    display: grid;
+}
+
+.orcamento-dados .botao {
+    background: var(--ponto-yellow);
+    padding: 20px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+   
+}
+
+@media (max-width: 1200px) {
+    .orcamento-produto,
+    .orcamento-dados {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 800px) {
+    .orcamento-container{
+        grid-template-columns: 1fr;
+    }
+    .orcamento-dados {
+        border-radius: 0 0 5px 5px;
+    }
+    .orcamento-produto {
+        border-radius: 0 0 5px 5px;
+    }
+   
+}
+
+@media (max-width: 400px) {
+    .orcamento-produto {
+        grid-template-columns: 1fr;
+    }
+}

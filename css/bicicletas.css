@@ -1,0 +1,130 @@
+.bicicletas-bg {
+    background: linear-gradient(to right, var(--text-primario) 30%, var(--bg-header) 0); /*pra fazer o background vazado*/
+    color: var(--text-primario);
+    /* box-shadow: inset 120px 0px var(--text-primario);     /* daria pra fazer mas não é o melhor */
+}
+
+.bicicletas-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.bicicletas-imagem {
+    display: grid;
+}
+
+.bicicletas-imagem img {
+    grid-area: 1/1;    /* 1 linha e 1 coluna*/
+
+}
+.bicicletas-imagem span {
+    grid-area: 1/1;    /* 1 linha e 1 coluna*/
+    place-self: start end;
+    margin-top: 20px;
+    background: var(--header-btn);
+    padding: 8px 16px 8px 8px;
+    display: inline-block;
+    border-radius: 4px 0 0 4px;
+}
+
+.bicicletas-conteudo  a {
+    padding: 20px;
+    background: var(--linear-four);
+}
+
+.bicicletas-conteudo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: start;
+}
+
+.bicicletas-conteudo  p,
+.bicicletas-conteudo  h2 {
+    grid-column: 1/-1;
+}
+
+.bicicletas-conteudo h2 {
+    margin-bottom: 20px;
+}
+
+.bicicletas-conteudo h2::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 8px;
+    background-color: var(--linear-four);
+    margin: 8px;
+}
+
+.bicicletas-conteudo p {
+    margin-bottom: 32px;
+}
+
+.bicicletas-conteudo a {
+    place-self: end;
+    border-radius: 4px;
+}
+
+.bicicletas-conteudo li {
+    display: flex;
+    align-items: center;
+}
+
+
+.bicicletas-conteudo ul {
+    display: grid;
+    gap: 16px;
+}
+
+
+.bicicletas-conteudo img {
+    width: 24px;
+    margin-right: 8px;
+}
+
+.botao-seta {
+    display: flex;
+    align-items: center;
+}
+
+.botao-seta::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    margin-left: 12px;
+    background: url('../img/icones/seta.svg');
+}
+
+.botao-seta:hover::after {
+    transform: translateX(5px);   /* movimenta a seta */ 
+}
+
+@media (max-width: 800px ) {
+    .bicicletas-bg {
+        background: var(--bg-header);
+    }
+    .bicicletas-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px ) {
+    .bicicletas-conteudo  {
+        grid-template-columns: 1fr;
+    }
+    .bicicletas-conteudo ul {
+        font-size: 1rem;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 32px;
+    }
+    .bicicletas-conteudo a {
+        place-self: start;
+    }
+}

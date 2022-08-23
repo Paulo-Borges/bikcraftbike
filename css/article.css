@@ -1,0 +1,79 @@
+.bicicletas-lista {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+.bicicletas-lista h2 {
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 60px;
+}
+
+.bicicletas-lista h2 span {
+    color: var(--linear-one);
+    border-radius: 50px;
+}
+
+.bicicletas-lista ul {
+    display: flex;      /* assim vai uma pro lado da outra*/
+    gap: 40px;
+    padding: 0 20px 20px 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;    /* pra colocar uma barra de scroll */
+} 
+
+.bicicletas-lista li {
+    flex: 1;              /* pra continuar flexivel*/
+    min-width: 280px;
+}
+
+.bicicletas-lista a {
+    display: block;
+}
+
+.bicicletas-lista img {
+    margin-bottom: 16px;
+}
+
+.bicicletas-lista h3 {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.bicicletas-lista h3::before {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 12px;
+    margin-right: 8px;
+    background-color: var(--linear-one);
+    transition: 0.3s;
+}
+
+.bicicletas-lista a:hover h3::before {
+    width: 24px;
+}
+
+.bicicletas-lista span {
+    color: var(--hover-header);
+}
+
+.bicicletas-lista li span {
+    padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+    .bicicletas-lista {
+        padding-bottom: 60px;
+    }
+    .bicicletas-lista ul {
+
+    }
+}
